@@ -1,2 +1,4 @@
 source _all.soar
+source proposals.soar
+source rules.soar
 source top-state.soar

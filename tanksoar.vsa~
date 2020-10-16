@@ -3,14 +3,11 @@ VERSION 4
 0	ROOT tanksoar tanksoar 1
 1	0	FOPERATOR _firstload _firstload.soar 2
 2	0	FOLDER all all 3
-3	2	HLIOPERATOR Impasse__State_No-Change Impasse__State_No-Change.soar Impasse__State_No-Change 54 11
-4	3	FOPERATOR elaborations elaborations.soar 12
-5	2	FOPERATOR propose propose.soar 4
-6	2	FOPERATOR apply apply.soar 5
-7	2	FOPERATOR Rules Rules.soar 13
-8	2	FOPERATOR sensing sensing.soar 6
-9	0	FOLDER elaborations elaborations 7
-10	9	FOPERATOR _all _all.soar 8
-11	9	FOPERATOR top-state top-state.soar 9
-12	0	OPERATOR initialize-tanksoar-default initialize-tanksoar-default.soar 10
+3	2	FOPERATOR applications applications.soar 4
+4	0	FOLDER elaborations elaborations 5
+5	4	FOPERATOR _all _all.soar 6
+6	4	FOPERATOR proposals proposals.soar 7
+7	4	FOPERATOR rules rules.soar 8
+8	4	FOPERATOR top-state top-state.soar 9
+9	0	OPERATOR initialize-tanksoar initialize-tanksoar.soar 10
 END

@@ -1,0 +1,15 @@
+sp {apply*move*radar-off
+   (state <s> ^name tanksoar
+              ^operator <o>
+              ^io.input-link <il>)
+   (<il> ^radar-status on
+        -^radar.<< energy health missiles tank >>)
+   (<o> ^name << turn move >>
+        ^actions <a>)
+-->
+   (<a> ^radar.switch off)}
+
+sp {elaborate*state*name
+ (state <s> ^superstate.operator.name <name>)
+-->
+ (<s> ^name <name>)} 

@@ -40,7 +40,9 @@ sp {propose*turn*backward
 
 ## Radar-off Operator Proposal
 # If the radar is on but no energy, health, missiles and tanks visible,
-# then propose the radar-off operator 
+# then propose the radar-off operator
+## Radar-off Search Control
+# If radar-off is proposed, then prefer it to move and turn.
 sp {propose*radar-off
    (state <s> ^name tanksoar
               ^io.input-link <il>)
@@ -50,9 +52,6 @@ sp {propose*radar-off
    (<s> ^operator <o> +)
    (<o> ^name radar-off
         ^actions.radar.switch off)}
-
-## Radar-off Search Control
-# If radar-off is proposed, then prefer it to move and turn. 
 sp {select*radar-off*move
    (state <s> ^name tanksoar
               ^operator <o1> +
@@ -62,16 +61,4 @@ sp {select*radar-off*move
 -->
    (<s> ^operator <o1> > <o2>)}
 
-##Wander Operator Proposal
-# If there is no tank detected on radar, and the sound is silent, and there
-# is no incoming, then propose the wander operator.
-sp {propose*wander
-   (state <s> ^name tanksoar
-              ^io.input-link <io>)
-   (<io> ^sound silent
-        -^radar.tank
-        -^incoming.<dir> yes)
--->
-   (<s> ^operator <o> +)
-   (<o> ^name wander)}
 
