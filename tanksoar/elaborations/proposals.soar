@@ -52,7 +52,7 @@ sp {propose*turn*backward
               ^io.input-link.blocked <b>)
    (<b> ^forward yes ^left yes ^right yes)
 -->
-   (<s> ^operator <o> +)
+   (<s> ^operator <o> + =)
    (<o> ^name turn
         ^actions.rotate.direction left)}
 sp {wander*propose*turn*backward
@@ -268,5 +268,5 @@ sp {top-state*propose*wait
               ^choices none
              -^operator.name wait)
 -->
-   (<s> ^operator <o> + )
+   (<s> ^operator <o> + =)
    (<o> ^name wait)}
