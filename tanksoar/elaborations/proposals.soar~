@@ -1,11 +1,11 @@
 ## Move Operator Proposal
 # If the task is tanksoar and the tank is not blocked in the forward
 # direction, propose the move operator.
-sp {tanksoar*propose*move
+sp {propose*move
    (state <s> ^name tanksoar
               ^io.input-link.blocked.forward no)
 -->
-   (<s> ^operator <o> +)
+   (<s> ^operator <o> + =)
    (<o> ^name move
         ^actions.move.direction forward)}
 sp {wander*propose*move
@@ -62,7 +62,7 @@ sp {wander*propose*turn*backward
         ^left yes
         ^right yes)
 -->
-   (<s> ^operator <o> +)
+   (<s> ^operator <o> + =)
    (<o> ^name turn
         ^actions.rotate.direction left)}
 ## Radar-off Operator Proposal
@@ -158,7 +158,7 @@ sp {attack*propose*fire-missile
    (state <s> ^name attack
               ^io.input-link <il>)
    (<il> ^radar.tank.position center
-         ^missiles > 0
+         ^missiles > 0)
 -->
    (<s> ^operator <o> + >)
    (<o> ^name fire-missile
@@ -268,5 +268,5 @@ sp {top-state*propose*wait
               ^choices none
              -^operator.name wait)
 -->
-   (<s> ^operator <o> +)
+   (<s> ^operator <o> + )
    (<o> ^name wait)}

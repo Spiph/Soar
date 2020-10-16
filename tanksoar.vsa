@@ -1,13 +1,13 @@
 VERSION 4
-\tanksoar\tanksoar.dm
+/tanksoar/tanksoar.dm
 0	ROOT tanksoar tanksoar 1
-1	0	FOPERATOR _firstload _firstload.soar 3
-2	0	FOLDER all all 4
-3	2	FOPERATOR applications applications.soar 9
-4	0	FOLDER elaborations elaborations 2
-5	4	FOPERATOR _all _all.soar 5
-6	4	FOPERATOR proposals proposals.soar 10
-7	4	FOPERATOR rules rules.soar 11
-8	4	FOPERATOR top-state top-state.soar 6
-9	0	OPERATOR initialize-tanksoar initialize-tanksoar.soar 7
+1	0	FOPERATOR _firstload _firstload.soar 2
+2	0	FOLDER all all 3
+3	2	FOPERATOR applications applications.soar 4
+4	0	FOLDER elaborations elaborations 5
+5	4	FOPERATOR _all _all.soar 6
+6	4	FOPERATOR proposals proposals.soar 7
+7	4	FOPERATOR rules rules.soar 8
+8	4	FOPERATOR top-state top-state.soar 9
+9	0	OPERATOR initialize-tanksoar initialize-tanksoar.soar 10
 END

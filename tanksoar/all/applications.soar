@@ -10,6 +10,11 @@ sp {apply*move*radar-off
    (<a> ^radar.switch off)}
 
 sp {elaborate*state*name
- (state <s> ^superstate.operator.name <name>)
+   (state <s> ^superstate.operator.name <name>)
 -->
- (<s> ^name <name>)} 
+   (<s> ^name <name>)}
+
+sp {elaborate*state*io
+   (state <s> ^superstate.io <io>)
+-->
+   (<s> ^io <io>)}
